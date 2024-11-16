@@ -65,7 +65,7 @@ def main():
                 conn.send(response.encode())
 
             except IOError:
-                not_found = create_html(title="404 Not Found", body= "<h1>404 Not Found</h1>", status= "404 Not Found")
+                not_found = create_html(title="", body= "<h1>Not Found</h1>", status= "404 Not Found")
                 conn.send(not_found.encode())
             finally:
                 conn.close()
