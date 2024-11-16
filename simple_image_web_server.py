@@ -9,7 +9,7 @@ import logging
 from concurrent.futures import ThreadPoolExecutor
 
 PORT_NUMBER = 6420 # Port to listen on
-MAX_WORKERS = 20  # Number of worker threads in the pool
+MAX_WORKERS = 8  # Number of worker threads in the pool (I have 8 cores os I chose 8)
 LISTEN_BACKLOG = 100  # Number of connections to queue
 IMAGE_FILE = "rick_roll.jpg" # File to serve
 
