@@ -7,9 +7,10 @@ from socket import *
 import sys
 import logging
 from concurrent.futures import ThreadPoolExecutor
+import multiprocessing
 
-PORT_NUMBER = 6420 # Port to listen on
-MAX_WORKERS = 8  # Number of worker threads in the pool (I have 8 cores os I chose 8)
+PORT_NUMBER = 6420  # Port to listen on
+MAX_WORKERS = multiprocessing.cpu_count()  # Number of worker threads in the pool (I have 8 cores os I chose 8)
 LISTEN_BACKLOG = 100  # Number of connections to queue
 IMAGE_FILE = "rick_roll.jpg" # File to serve
 
