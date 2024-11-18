@@ -7,9 +7,10 @@ from socket import *
 import sys
 import logging
 from concurrent.futures import ThreadPoolExecutor
+import multiprocessing
 
 PORT_NUMBER = 6421  # Port to listen on
-MAX_WORKERS = 8  # Number of worker threads in the pool (I have 8 cores os I chose 8)
+MAX_WORKERS = multiprocessing.cpu_count()  # Number of worker threads in the pool (I have 8 cores os I chose 8)
 LISTEN_BACKLOG = 100  # Number of connections to queue
 COLORS = {"red": "#FF0000", "green": "#00FF00", "blue": "#0000FF", "orange": "#FFA500", "pink": "#FFC0CB", "cyan": "#00FFFF", "magenta": "#FF00FF", "brown": "#7B3F00"}  # Available colors with their hex codes (by having red first it takes precedence)
 
